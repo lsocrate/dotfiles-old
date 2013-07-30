@@ -34,7 +34,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gnu-utils history-substring-search command-not-found coffee gem npm vagrant)
+plugins=(git gnu-utils history-substring-search command-not-found coffee gem npm vagrant python pip django rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,3 +42,5 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="lsocrate"
 
 export EDITOR=vim
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -15,3 +15,5 @@
 
 [color]
 	ui = true
+[core]
+	excludesfile = /Users/tagon8/.gitignore_global

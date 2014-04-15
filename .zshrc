@@ -32,14 +32,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gnu-utils history-substring-search coffee npm brew cp osx)
+plugins=(git gnu-utils history-substring-search npm brew cp osx sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-DEFAULT_USER="tagon8"
 
 export EDITOR=vim
 
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH=/usr/local/bin:$PATH

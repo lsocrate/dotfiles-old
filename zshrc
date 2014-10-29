@@ -37,13 +37,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gnu-utils history-substring-search npm brew cp sublime bower docker vagrant command-not-found)
+plugins=(git gnu-utils history-substring-search npm brew cp sublime bower vagrant command-not-found rvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export EDITOR=vim
 
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH=/usr/local/bin:$PATH
 # You may need to manually set your language environment

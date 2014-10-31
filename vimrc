@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 
 " My Bundles
 Bundle 'wavded/vim-stylus'
+Bundle 'heartsentwined/vim-emblem'
 
 syntax on
 set number

@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export EDITOR=vim
+export SHELL="zsh"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin

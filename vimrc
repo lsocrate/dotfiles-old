@@ -10,6 +10,14 @@ Bundle 'gmarik/vundle'
 " My Bundles
 Bundle 'wavded/vim-stylus'
 Bundle 'heartsentwined/vim-emblem'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'elzr/vim-json'
+Bundle 'mattn/emmet-vim'
+Bundle 'Raimondi/delimitMate'
+
+
+set listchars=trail:.,tab:--
+set list
 
 syntax on
 set number

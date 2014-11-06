@@ -10,10 +10,13 @@ Bundle 'gmarik/vundle'
 " My Bundles
 Bundle 'wavded/vim-stylus'
 Bundle 'heartsentwined/vim-emblem'
+Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'elzr/vim-json'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 
 set listchars=trail:.,tab:--
@@ -44,3 +47,9 @@ set statusline+=%=
 set statusline+=%l
 set statusline+=/
 set statusline+=%L
+
+let mapleader = ","
+
+" NERDTree
+nnoremap <leader>nt :NERDTreeTabsToggle<cr>
+let g:nerdtree_tabs_open_on_gui_startup = 0

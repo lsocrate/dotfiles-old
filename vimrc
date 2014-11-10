@@ -18,6 +18,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 
+Plugin 'flazz/vim-colorschemes'
+
 
 set listchars=trail:.,tab:--
 set list
@@ -33,6 +35,8 @@ set tabstop=2
 set smarttab
 
 set encoding=utf-8
+
+colorscheme candy
 
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown

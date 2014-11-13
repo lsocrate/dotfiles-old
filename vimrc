@@ -57,3 +57,6 @@ let mapleader = ","
 " NERDTree
 nnoremap <leader>nt :NERDTreeTabsToggle<cr>
 let g:nerdtree_tabs_open_on_gui_startup = 0
+
+" Trim whitespace
+autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre <buffer> :%s/\s\+$//e

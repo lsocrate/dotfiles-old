@@ -29,6 +29,7 @@ syntax on
 
 " Display line numbers
 set number
+set numberwidth=5
 
 " Indenting
 set autoindent smartindent

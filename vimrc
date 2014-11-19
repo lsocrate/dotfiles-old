@@ -16,6 +16,8 @@ Bundle 'elzr/vim-json'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/PreserveNoEOL'
+Bundle 'editorconfig/editorconfig-vim'
 
 Plugin 'flazz/vim-colorschemes'
 

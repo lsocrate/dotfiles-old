@@ -52,11 +52,10 @@ set directory=~/.vim/tmp
 
 " Status line
 set laststatus=2
-set statusline=%f
+set statusline=%f "Filename"
 set statusline+=%=
-set statusline+=%l
-set statusline+=/
-set statusline+=%L
+set statusline+=%c,
+set statusline+=%l/%L
 
 " code width
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

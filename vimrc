@@ -18,6 +18,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/PreserveNoEOL'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'scrooloose/nerdcommenter'
 
 Plugin 'flazz/vim-colorschemes'
 

@@ -70,6 +70,10 @@ set completeopt-=preview
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Split to right and bottom. Makes more sense
+set splitbelow
+set splitright
+
 " Shortcuts
 let mapleader = " "
 " -- Tabs

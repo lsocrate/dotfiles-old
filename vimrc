@@ -22,8 +22,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Plugin 'flazz/vim-colorschemes'
 
 " Show trailing spaces
-set listchars=trail:.,tab:--
-set list
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " Syntax highlight
 syntax on

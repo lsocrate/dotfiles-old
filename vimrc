@@ -59,8 +59,10 @@ set statusline+=%c,
 set statusline+=%l/%L
 
 " code width
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+  autocmd BufEnter * match OverLength /\%>80v.\+/
+augroup END
 
 " Trim whitespace
 autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre <buffer> :%s/\s\+$//e

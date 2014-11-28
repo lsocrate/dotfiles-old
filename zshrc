@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export SHELL="zsh"
 
+export PATH=$HOME/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH=/usr/local/bin:$PATH

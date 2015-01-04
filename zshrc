@@ -74,3 +74,6 @@ export PATH=/usr/local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# added by travis gem
+[ -f /home/lsocrate/.travis/travis.sh ] && source /home/lsocrate/.travis/travis.sh

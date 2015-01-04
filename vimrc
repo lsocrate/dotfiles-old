@@ -20,6 +20,7 @@ Bundle 'vim-scripts/PreserveNoEOL'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'scrooloose/nerdcommenter'
 
+Plugin 'othree/html5.vim'
 Plugin 'flazz/vim-colorschemes'
 
 " Show trailing spaces

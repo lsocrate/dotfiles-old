@@ -2,26 +2,33 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" Let Vundle manage itself
+Plugin 'gmarik/vundle'
 
-" My Bundles
-Bundle 'wavded/vim-stylus'
-Bundle 'heartsentwined/vim-emblem'
-Bundle 'nono/vim-handlebars'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'elzr/vim-json'
-Bundle 'mattn/emmet-vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/PreserveNoEOL'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'scrooloose/nerdcommenter'
-
+" Plugins
+Plugin 'wavded/vim-stylus'
+Plugin 'heartsentwined/vim-emblem'
+Plugin 'nono/vim-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elzr/vim-json'
+Plugin 'mattn/emmet-vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/PreserveNoEOL'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'othree/html5.vim'
+Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
+
+
+call vundle#end()
+
+filetype plugin on
 
 " Show trailing spaces
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -42,7 +49,8 @@ set smarttab
 
 set encoding=utf-8
 
-colorscheme candy
+set background=dark
+colorscheme luna
 
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
@@ -54,10 +62,6 @@ set directory=~/.vim/tmp
 
 " Status line
 set laststatus=2
-set statusline=%f "Filename"
-set statusline+=%=
-set statusline+=%c,
-set statusline+=%l/%L
 
 " code width
 augroup vimrc_autocmds
@@ -71,21 +75,65 @@ autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre 
 " Autocomplete
 set complete=.,w,b,u,U,t,i,d
 set completeopt-=preview
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 " Split to right and bottom. Makes more sense
 set splitbelow
 set splitright
 
+" This allows buffers to be hidden if you've modified a buffer.
+set hidden
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts=1
+let g:airline_theme='dark'
+
+" CtrlP config
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|tmp|dist)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
+" Use the nearest .git directory as the cwd
+" This makes a lot of sense if you are working on a project that is in version
+" control. It also supports works with .svn, .hg, .bzr.
+let g:ctrlp_working_path_mode = 'r'
+
+" Buffergator configs
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+
 " Shortcuts
 let mapleader = " "
-" -- Tabs
-nnoremap to :Texplore<CR>
-nnoremap tt :tabnew<CR>
-nnoremap te :tabedit
-nnoremap tc :tabclose<CR>
-nnoremap tn :tabnext<CR>
-nnoremap tp :tabprevious<CR>
-" -- Syntastic
-nnoremap <leader>l :SyntasticCheck<CR>
+
+" Activate and deactivate paste mode
+nmap <leader>v :set paste!<cr>
+
+" To open a new empty buffer
+nmap <leader>t :enew<cr>
+
+" Move to the next buffer
+nmap <leader>h :BuffergatorMruCyclePrev<cr>
+
+" Move to the previous buffer
+nmap <leader>l :BuffergatorMruCycleNext<cr>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>q :bp <BAR> bd #<CR>
+
+" Use a leader instead of the actual named binding
+nmap <leader>p :CtrlP<cr>
+
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>

@@ -13,6 +13,7 @@ function main() {
   done
   setup_vim
   setup_zsh
+  setup_fonts
 }
 
 function setup_vim() {
@@ -27,6 +28,25 @@ function setup_vim() {
 
 function setup_zsh() {
   git clone http://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+}
+
+function setup_fonts() {
+  if [[ `uname` == 'Darwin' ]]; then
+    # MacOS
+    font_dir="$HOME/Library/Fonts"
+  else
+    # Linux
+    font_dir="$HOME/.fonts"
+    mkdir -p $font_dir
+  fi
+
+  find fonts -type f | xargs -0 -I % cp "%" "$font_dir/"
+
+  if [[ -n `which fc-cache` ]]; then
+    fc-cache -f $font_dir
+  fi
+
+  echo "Fonts installed"
 }
 
 main

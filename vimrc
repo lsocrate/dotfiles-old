@@ -50,7 +50,7 @@ set smarttab
 set encoding=utf-8
 
 set background=dark
-colorscheme luna
+colorscheme candy
 
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown

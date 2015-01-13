@@ -114,6 +114,7 @@ let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
 
+" #########
 " Shortcuts
 let mapleader = " "
 
@@ -140,3 +141,6 @@ nmap <leader>p :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
+
+" Easy split
+nmap <silent><C-w>n :vsplit<cr>

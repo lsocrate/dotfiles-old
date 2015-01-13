@@ -55,6 +55,9 @@ colorscheme candy
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
 
+" Support other json extensions
+au BufNewFile,BufRead .jshintrc set filetype=json
+
 " Backup and tmp files
 set backup
 set backupdir=~/.vim/backup

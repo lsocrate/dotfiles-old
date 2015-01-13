@@ -24,7 +24,8 @@ Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
-
+Plugin 'chriskempson/base16-vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
@@ -49,8 +50,18 @@ set smarttab
 
 set encoding=utf-8
 
+let base16colorspace=256
 set background=dark
-colorscheme candy
+colorscheme base16-monokai
+if has("unix")
+  let s:uname = system("echo -n \"$(uname)\"")
+  if !v:shell_error && s:uname == "Linux"
+    set t_Co=256
+    if $TERM =~ '256color'
+      set t_ut=
+    endif
+  endif
+endif
 
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
@@ -93,7 +104,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='base16'
 
 " CtrlP config
 " Setup some default ignores

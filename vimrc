@@ -53,15 +53,8 @@ set encoding=utf-8
 let base16colorspace=256
 set background=dark
 colorscheme base16-monokai
-if has("unix")
-  let s:uname = system("echo -n \"$(uname)\"")
-  if !v:shell_error && s:uname == "Linux"
-    set t_Co=256
-    if $TERM =~ '256color'
-      set t_ut=
-    endif
-  endif
-endif
+set t_Co=256
+set t_ut=
 
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown

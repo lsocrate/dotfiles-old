@@ -54,6 +54,8 @@ export EDITOR=vim
 export SHELL="zsh"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/local/bin:$PATH
+export PATH=/usr/local/heroku/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

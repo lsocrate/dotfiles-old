@@ -26,6 +26,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'chriskempson/base16-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kshenoy/vim-signature'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -44,12 +46,8 @@ set numberwidth=5
 " Indenting
 set autoindent smartindent
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set smarttab
 
-set encoding=utf-8
-
+" Colorschemes
 let base16colorspace=256
 set background=dark
 colorscheme base16-monokai
@@ -95,7 +93,7 @@ set hidden
 let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16'
 
@@ -153,3 +151,7 @@ nmap <leader>bs :CtrlPMRU<cr>
 
 " Easy split
 nmap <silent><C-w>n :vsplit<cr>
+
+" Nerdtree
+nnoremap <leader>nt :NERDTreeToggle<cr>
+let g:nerdtree_tabs_open_on_gui_startup = 0

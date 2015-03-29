@@ -89,6 +89,9 @@ set splitright
 " This allows buffers to be hidden if you've modified a buffer.
 set hidden
 
+" Git commit messages should start with cursor on line 1
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 

@@ -69,10 +69,7 @@ set directory=~/.vim/tmp
 set laststatus=2
 
 " code width
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
-  autocmd BufEnter * match OverLength /\%>80v.\+/
-augroup END
+set colorcolumn=81
 
 " Trim whitespace
 autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre <buffer> :%s/\s\+$//e

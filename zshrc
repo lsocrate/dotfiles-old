@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git heroku npm vagrant cp tmux)
+plugins=(git heroku nvm npm vagrant cp tmux)
 
 # User configuration
 DEFAULT_USER="lsocrate"
@@ -60,6 +60,10 @@ export PATH=/usr/local/heroku/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/base16-shell/base16-monokai.dark.sh
+
+# NVM
+export NVM_DIR="/home/lsocrate/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

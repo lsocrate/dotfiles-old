@@ -10,7 +10,7 @@ Plugin 'gmarik/vundle'
 " Plugins
 Plugin 'wavded/vim-stylus'
 Plugin 'heartsentwined/vim-emblem'
-Plugin 'nono/vim-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'

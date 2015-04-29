@@ -53,10 +53,10 @@ DEFAULT_USER="lsocrate"
 export EDITOR=vim
 export SHELL="zsh"
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/local/bin:$PATH
-export PATH=/usr/local/heroku/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+PATH=/usr/local/heroku/bin:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=$HOME/bin:$PATH
+PATH=$HOME/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/base16-shell/base16-monokai.dark.sh

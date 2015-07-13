@@ -90,3 +90,6 @@ export NVM_DIR="/home/lsocrate/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# added by travis gem
+[ -f /home/lsocrate/.travis/travis.sh ] && source /home/lsocrate/.travis/travis.sh

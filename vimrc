@@ -1,8 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+call vundle#rc()
 
 " Let Vundle manage itself
 Plugin 'gmarik/vundle'
@@ -28,8 +27,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kshenoy/vim-signature'
 Plugin 'scrooloose/nerdtree'
-
-call vundle#end()
 
 filetype plugin on
 

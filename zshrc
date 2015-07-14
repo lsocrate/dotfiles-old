@@ -36,3 +36,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # User configuration
 DEFAULT_USER="lsocrate"
+
+source "$HOME/.alias"
+
+# Ignore duplicates on history
+setopt HIST_IGNORE_DUPS

@@ -1,8 +1,9 @@
 [user]
-	email = luiz@socrate.com.br
-	name = Luiz Sócrate
+  email = luiz@socrate.com.br
+  name = Luiz Sócrate
+
 [push]
-	default = simple
+  default = simple
 
 [alias]
   co = checkout

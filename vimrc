@@ -116,14 +116,12 @@ let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
 
-" JSON Formater
-function! FormatJSON()
-  %!python -m json.tool
-endfunction
-
 " #########
 " Shortcuts
 let mapleader = " "
+
+" Format JSON
+map <leader>j !python -m json.tool<CR>
 
 " Activate and deactivate paste mode
 nmap <leader>v :set paste!<cr>

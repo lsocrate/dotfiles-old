@@ -1,1 +1,2 @@
 alias refresh-mirrors='sudo reflector --verbose --country "Brazil" -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias nv=nvim

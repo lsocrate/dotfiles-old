@@ -45,6 +45,9 @@ colorscheme base16-monokai
 set t_Co=256
 set t_ut=
 
+" Remember position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
 

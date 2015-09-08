@@ -1,0 +1,7 @@
+||paywall.estadao.com.br^
+||estadao.com.br/paywall/*
+||www1.folha.uol.com.br/folha/furniture/paywall/*
+||static.folha.com.br/paywall/*
+||oglobo.globo.com/servicos/inc/payWall.Conteudo.js
+||oglobo.globo.com/plataforma/js/*/minificados/paywall/registraConteudosLidos.js
+||gazetadopovo.com.br/assinaturas/public/js/connect_api.js*

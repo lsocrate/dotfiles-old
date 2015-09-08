@@ -41,8 +41,6 @@ set expandtab
 let base16colorspace=256
 set background=dark
 colorscheme base16-monokai
-set t_Co=256
-set t_ut=
 set nohlsearch
 
 " Remember position

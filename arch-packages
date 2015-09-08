@@ -1,0 +1,23 @@
+# Essentials
+sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector
+
+# Dev
+yaourt -S neovim-git xclip python-neovim python2-neovim heroku-toolbelt nvm-git zsh zsh-completions tmux
+
+# Interface
+yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git ttf-symbola
+
+# Firefox plugins
+yaourt -S chromium-pepper-flash  freshplayerplugin-git icedtea-web google-talkplugin
+
+# Vagrant
+yaourt -S dnsutils vagrant virtualbox virtualbox-host-modules net-tools virtualbox-ext-oracle
+
+# Libreoffice
+yaourt -S libreoffice-fresh kdelibs pstoedit libmythes libmspack libpaper coin-or-mp hunspell hunspell-en hunspell-fr hunspell-es mythes-en mythes-es mythes-fr hyphen-en hyphen-es hyphen-fr
+
+# Skype
+yaourt -S skype lib32-apulse lib32-sni-qt
+
+# Others
+yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware

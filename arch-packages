@@ -1,5 +1,5 @@
 # Essentials
-sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector
+sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers
 
 # Dev
 yaourt -S neovim-git xclip python-neovim python2-neovim heroku-toolbelt nvm-git zsh zsh-completions tmux
@@ -20,4 +20,4 @@ yaourt -S libreoffice-fresh kdelibs pstoedit libmythes libmspack libpaper coin-o
 yaourt -S skype lib32-apulse lib32-sni-qt
 
 # Others
-yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware
+yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao

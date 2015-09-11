@@ -19,5 +19,8 @@ yaourt -S libreoffice-fresh kdelibs pstoedit libmythes libmspack libpaper coin-o
 # Skype
 yaourt -S skype lib32-apulse lib32-sni-qt
 
+# Dropbox
+yaourt -S dropbox dropbox-cli kfilebox
+
 # Others
 yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao

@@ -81,6 +81,9 @@ set hidden
 " Visual autocomplete
 set wildmenu
 
+" Disable mouse
+set mouse=
+
 " Git commit messages should start with cursor on line 1
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 

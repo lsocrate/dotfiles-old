@@ -1,5 +1,5 @@
 # Essentials
-sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget
+sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget unzip kdegraphics-ksnapshot ark p7zip zip unrar partitionmanager dosfstools
 
 # Dev
 yaourt -S neovim-git xclip python-neovim python2-neovim heroku-toolbelt zsh zsh-completions tmux ack httpie

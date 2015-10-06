@@ -18,3 +18,8 @@ function pre-vbox() {
 function my-ip() {
   dig +short myip.opendns.com @resolver1.opendns.com
 }
+
+function mastercard-exchange() {
+  local TODAY=$(date +'%m/%d/%Y')
+  http -f POST https://www.mastercard.com/psder/eu/callPsder.do service="getExchngRateDetails" baseCurrency="USD" settlementDate="$TODAY" | grep -oP "<TRANSACTION_CURRENCY_DTL><ALPHA_CURENCY_CODE>$1.*?</TRANSACTION_CURRENCY_DTL>" | grep -oP "[0-9.]+"
+}

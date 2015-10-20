@@ -29,4 +29,4 @@ yaourt -S dropbox dropbox-cli kfilebox
 yaourt -S amarok gst-libav
 
 # Others
-yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao
+yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao mkvtoolnix-gui

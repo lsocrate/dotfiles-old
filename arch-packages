@@ -8,7 +8,7 @@ yaourt -S neovim-git xclip python-neovim python2-neovim heroku-toolbelt zsh zsh-
 yaourt -S nvm-git phantomjs
 
 # Interface
-yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git ttf-symbola
+yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git noto-fonts-emoji
 
 # Firefox plugins
 yaourt -S chromium-pepper-flash  freshplayerplugin-git icedtea-web google-talkplugin

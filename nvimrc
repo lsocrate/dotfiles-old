@@ -1,6 +1,6 @@
 filetype off
 
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'wavded/vim-stylus'
 Plug 'heartsentwined/vim-emblem'
 Plug 'mustache/vim-mustache-handlebars'
@@ -54,8 +54,8 @@ au BufNewFile,BufRead .jshintrc set filetype=json
 
 " Backup and tmp files
 set backup
-set backupdir=~/.nvim/backup
-set directory=~/.nvim/tmp
+set backupdir=~/.config/nvim/backup
+set directory=~/.config/nvim/tmp
 
 " Status line
 set laststatus=2

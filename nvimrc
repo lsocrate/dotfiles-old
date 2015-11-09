@@ -19,6 +19,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'kshenoy/vim-signature'
 Plug 'scrooloose/nerdtree'
 Plug 'benekastah/neomake'
+Plug 'terryma/vim-multiple-cursors'
 
 " Add plugins to &runtimepath
 call plug#end()

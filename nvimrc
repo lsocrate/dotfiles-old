@@ -20,6 +20,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'scrooloose/nerdtree'
 Plug 'benekastah/neomake'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'digitaltoad/vim-jade'
 
 " Add plugins to &runtimepath
 call plug#end()

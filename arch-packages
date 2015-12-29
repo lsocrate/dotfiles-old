@@ -1,14 +1,20 @@
 # Essentials
-sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget unzip kdegraphics-ksnapshot ark p7zip zip unrar partitionmanager dosfstools
+sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget unzip kdegraphics-ksnapshot ark p7zip zip unrar partitionmanager dosfstools dolphin-plugins
+
+# Intel Graphics
+yaourt -S xf86-video-intel mesa-libgl lib32-mesa-libgl libva-intel-driver libva
+
+# AMD Graphics
+yaourt -S ati-dri xf86-video-ati lib32-mesa lib32-mesa-libgl mesa-libgl mesa-demos libtxc_dxtn lib32-libtxc_dxtn lib32-ati-dri
 
 # Dev
 yaourt -S neovim xclip python-neovim heroku-toolbelt zsh zsh-completions tmux ack httpie
 
 # Node
-yaourt -S nvm-git phantomjs
+yaourt -S nvm-git phantomjs gcc
 
 # Interface
-yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git noto-fonts-emoji
+yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git noto-fonts-emoji breeze-gtk quota-tools
 
 # Firefox plugins
 yaourt -S chromium-pepper-flash  freshplayerplugin-git icedtea-web google-talkplugin
@@ -29,4 +35,4 @@ yaourt -S dropbox dropbox-cli kfilebox
 yaourt -S amarok gst-libav
 
 # Others
-yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao mkvtoolnix-gui
+yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao mkvtoolnix-gui opensc wireless_tools

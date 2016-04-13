@@ -1,7 +1,7 @@
 alias nv=nvim
 
 function refresh-mirrors() {
-  sudo reflector --verbose --country "$1" -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+  sudo reflector --verbose --country "$1" -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 wifi-strength() {

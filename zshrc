@@ -14,6 +14,7 @@ antigen bundle npm
 antigen bundle vagrant
 antigen bundle cp
 antigen bundle tmux
+antigen bundle tmuxinator
 antigen bundle command-not-found
 
 antigen apply
@@ -23,7 +24,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export EDITOR=nvim
-export SHELL="zsh"
+export SHELL=zsh
+
+# PATH
+PATH=~/.gem/ruby/2.3.0/bin:$PATH
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-monokai.dark.sh"

@@ -11,8 +11,10 @@ Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'othree/html5.vim'
-Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'chriskempson/base16-vim'
 Plug 'pangloss/vim-javascript'
@@ -57,6 +59,9 @@ au BufNewFile,BufRead .jshintrc set filetype=json
 set backup
 set backupdir=~/.config/nvim/backup
 set directory=~/.config/nvim/tmp
+
+" Autoreload files changed on disk
+set autoread
 
 " Status line
 set laststatus=2

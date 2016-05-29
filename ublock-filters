@@ -4,4 +4,5 @@
 ||static.folha.com.br/paywall/*
 ||oglobo.globo.com/servicos/inc/payWall.Conteudo.js
 ||oglobo.globo.com/plataforma/js/*/minificados/paywall/registraConteudosLidos.js
+||oglobo.globo.com/plataforma/js/*/minificados/paywall/controla-acesso.js
 ||gazetadopovo.com.br/assinaturas/public/js/connect_api.js*

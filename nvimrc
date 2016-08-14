@@ -2,7 +2,6 @@ filetype off
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'wavded/vim-stylus'
-Plug 'heartsentwined/vim-emblem'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
@@ -23,6 +22,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'benekastah/neomake'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'digitaltoad/vim-jade'
+Plug 'AndrewRadev/ember_tools.vim'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'lervag/vimtex'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -35,6 +38,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Display line numbers
 set number
 set numberwidth=5
+set scrolloff=5
 
 " Indenting
 set autoindent smartindent
@@ -93,6 +97,18 @@ set mouse=
 " Git commit messages should start with cursor on line 1
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
+
+" ----- JAVASCRIPT -----
+" Highlight jsdoc
+let g:javascript_plugin_jsdoc = 1
+
+" ----- JSDOC -----
+" Underscore is private
+let g:jsdoc_underscore_private = 1
+
+" Enable es6
+let g:jsdoc_enable_es6 = 1
+
 " ----- AIRLINE -----
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -105,7 +121,7 @@ let g:airline_theme='base16'
 " ----- CtrlP -----
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|tmp|dist)$',
+  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|tmp|dist|plugins)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 
@@ -166,3 +182,6 @@ nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+
+" Jsdoc
+nmap <silent> <C-l> <Plug>(jsdoc)

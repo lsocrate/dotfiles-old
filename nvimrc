@@ -142,7 +142,7 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " ----- Neomake -----
 let g:neomake_verbose = 0
-let g:neomake_javascript_enabled_makers = ['jshint']
+let g:neomake_javascript_enabled_makers = ['jshint', 'eslint']
 " Make run authomatically on saves
 autocmd FileType javascript autocmd BufWritePost * Neomake
 

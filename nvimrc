@@ -7,6 +7,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
 Plug 'mattn/emmet-vim'
 Plug 'cohama/lexima.vim'
+Plug 'alfredodeza/jacinto.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'othree/html5.vim'
@@ -149,6 +150,9 @@ autocmd FileType javascript autocmd BufWritePost * Neomake
 " #########
 " Shortcuts
 let mapleader = " "
+
+" Refactor setters
+nmap <leader>rs :%s/ \(\w*\).set(/ set(\1, /gc<CR>
 
 " Format JSON
 map <leader>j !python -m json.tool<CR>

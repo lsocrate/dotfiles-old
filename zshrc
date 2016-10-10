@@ -1,4 +1,4 @@
-source $HOME/.antigen/antigen.zsh
+source /usr/share/zsh/scripts/antigen/antigen.zsh
 
 # Oh my zsh!
 antigen use oh-my-zsh
@@ -30,7 +30,7 @@ export SHELL=zsh
 PATH=~/.gem/ruby/2.3.0/bin:$PATH
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-monokai.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-monokai.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Uncomment the following line if you want to disable marking untracked files

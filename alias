@@ -24,8 +24,3 @@ function clean-steam-libs() {
   find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" -o -name "libgpg-error.so*" \) -print -delete
   find ~/.local/share/Steam/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" -o -name "libgpg-error.so*" \) -print -delete
 }
-
-function mastercard-exchange() {
-  local TODAY=$(date +'%m/%d/%Y')
-  http -f POST https://www.mastercard.com/psder/eu/callPsder.do service="getExchngRateDetails" baseCurrency="USD" settlementDate="$TODAY" | grep -oP "<TRANSACTION_CURRENCY_DTL><ALPHA_CURENCY_CODE>$1.*?</TRANSACTION_CURRENCY_DTL>" | grep -oP "[0-9.]+"
-}

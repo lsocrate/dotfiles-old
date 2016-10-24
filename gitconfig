@@ -6,16 +6,17 @@
   default = simple
 
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  cp = cherry-pick
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  untracked = ls-files --others --exclude-standard
   abort-merge = reset --hard HEAD
+  amend = commit --amend
+  br = branch
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  dump = cat-file -p
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  st = status
+  type = cat-file -t
+  untracked = ls-files --others --exclude-standard
 
 [color]
   ui = true

@@ -153,6 +153,7 @@ let mapleader = " "
 
 " Refactor setters
 nmap <leader>rs :%s/ \(\w*\).set(/ set(\1, /gc<CR>
+nmap <leader>rg :%s/ \(\w*\).get(/ get(\1, /gc<CR>
 
 " Format JSON
 map <leader>j !python -m json.tool<CR>

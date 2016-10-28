@@ -57,6 +57,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Support all markdown extensions
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
 
+" Support all js extensions
+au BufNewFile,BufRead *.js.es6 set filetype=javascript
+
 " Support other json extensions
 au BufNewFile,BufRead .jshintrc set filetype=json
 

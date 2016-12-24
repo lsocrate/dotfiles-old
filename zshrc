@@ -1,23 +1,23 @@
-source /usr/share/zsh/scripts/antigen/antigen.zsh
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
-# Oh my zsh!
-antigen use oh-my-zsh
+if ! zgen saved; then
+  # Plugins
+  zgen oh-my-zsh
+  zgen oh-my-zsh themes/agnoster
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/heroku
+  zgen oh-my-zsh plugins/nvm
+  zgen oh-my-zsh plugins/npm
+  zgen oh-my-zsh plugins/vagrant
+  zgen oh-my-zsh plugins/cp
+  zgen oh-my-zsh plugins/tmux
+  zgen oh-my-zsh plugins/tmuxinator
+  zgen oh-my-zsh plugins/command-not-found
 
-# Theme
-antigen theme agnoster
-
-# Oh my zsh defaults
-antigen bundle git
-antigen bundle heroku
-antigen bundle nvm
-antigen bundle npm
-antigen bundle vagrant
-antigen bundle cp
-antigen bundle tmux
-antigen bundle tmuxinator
-antigen bundle command-not-found
-
-antigen apply
+  # generate the init script from plugins above
+  zgen save
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

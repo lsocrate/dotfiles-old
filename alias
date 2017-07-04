@@ -1,5 +1,6 @@
 alias nv=nvim
 alias mux=tmuxinator
+alias ls='ls --color=auto'
 
 function refresh-mirrors() {
   sudo reflector --verbose --country "$1" -l 15 --sort rate --save /etc/pacman.d/mirrorlist

@@ -29,7 +29,10 @@ export EDITOR=nvim
 export SHELL=zsh
 
 # PATH
-PATH=~/.gem/ruby/2.3.0/bin:$PATH
+PATH=~/.gem/ruby/2.4.0/bin:$PATH
+
+# CDPATH
+CDPATH=~/Projects
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-monokai.sh"

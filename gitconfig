@@ -17,6 +17,8 @@
   st = status
   type = cat-file -t
   untracked = ls-files --others --exclude-standard
+  count-lines = !git ls-files | xargs wc -l
+  stepback = checkout HEAD~1
 
 [color]
   ui = true

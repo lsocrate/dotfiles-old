@@ -1,38 +1,57 @@
 filetype off
 
 call plug#begin('~/.config/nvim/plugged')
+" UI
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/base16-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdtree'
+
+" Marker support
+Plug 'kshenoy/vim-signature'
+
+" Build
+Plug 'benekastah/neomake'
+
+" Languages
 Plug 'wavded/vim-stylus'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'digitaltoad/vim-jade'
+Plug 'lervag/vimtex'
+Plug 'mxw/vim-jsx'
+Plug 'neo4j-contrib/cypher-vim-syntax'
+Plug 'mhartington/nvim-typescript'
+
+" HTML structure builder
 Plug 'mattn/emmet-vim'
+
+" Auto-close parentheses etc
 Plug 'cohama/lexima.vim'
+
+" JSON Validation and formatting
 Plug 'alfredodeza/jacinto.vim'
+
+" Misc
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'othree/html5.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'chriskempson/base16-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'kshenoy/vim-signature'
-Plug 'scrooloose/nerdtree'
-Plug 'benekastah/neomake'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'digitaltoad/vim-jade'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'lervag/vimtex'
-Plug 'neo4j-contrib/cypher-vim-syntax'
 
+" Completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Add plugins to &runtimepath
 call plug#end()
 
-filetype plugin on
+filetype plugin indent on
+syntax enable
 
 " Show trailing spaces
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -62,7 +81,7 @@ au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md set filetype=markdown
 au BufNewFile,BufRead *.js.es6 set filetype=javascript
 
 " Support other json extensions
-au BufNewFile,BufRead .jshintrc set filetype=json
+au BufNewFile,BufRead .jshintrc,.eslintrc set filetype=json
 
 " Backup and tmp files
 set backup
@@ -85,6 +104,13 @@ autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre 
 set complete=.,w,b,u,U,t,i,d
 set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
+" Enable deoplete
+let g:deoplete#enable_at_startup = 1
+" use tab to forward cycle
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" use tab to backward cycle
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
 
 " Split to right and bottom. Makes more sense
 set splitbelow
@@ -113,6 +139,10 @@ let g:jsdoc_underscore_private = 1
 
 " Enable es6
 let g:jsdoc_enable_es6 = 1
+
+" Allow JSX in common js files
+let g:jsx_ext_required = 0
+
 
 " ----- AIRLINE -----
 " Enable the list of buffers
@@ -147,7 +177,6 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " ----- Neomake -----
 let g:neomake_verbose = 0
-" let g:neomake_javascript_enabled_makers = ['jshint', 'eslint']
 let g:neomake_javascript_enabled_makers = ['eslint']
 " Make run authomatically on saves
 autocmd FileType javascript autocmd BufWritePost * Neomake
@@ -155,13 +184,6 @@ autocmd FileType javascript autocmd BufWritePost * Neomake
 " #########
 " Shortcuts
 let mapleader = " "
-
-" Refactor setters
-nmap <leader>rs :%s/ \(\w*\).set(/ set(\1, /gc<CR>
-nmap <leader>rg :%s/ \(\w*\).get(/ get(\1, /gc<CR>
-
-" Format JSON
-map <leader>j !python -m json.tool<CR>
 
 " Activate and deactivate paste mode
 nmap <leader>v :set paste!<cr>
@@ -186,12 +208,19 @@ nmap <leader>p :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
-
 " Easy split
+
 nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
 nnoremap <leader>nt :NERDTreeToggle<cr>
 
 " Jsdoc
-nmap <silent> <C-l> <Plug>(jsdoc)
+nmap <leader>d <Plug>(jsdoc)
+
+" Lint
+nmap <silent><C-l> :Neomake<cr>
+
+"""" Navigation
+noremap H ^
+noremap L g_

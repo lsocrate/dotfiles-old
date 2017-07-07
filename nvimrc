@@ -9,6 +9,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdtree'
 
+" Completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Marker support
 Plug 'kshenoy/vim-signature'
 
@@ -27,6 +30,8 @@ Plug 'lervag/vimtex'
 Plug 'mxw/vim-jsx'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'mhartington/nvim-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'hdima/python-syntax'
 
 " HTML structure builder
 Plug 'mattn/emmet-vim'
@@ -43,9 +48,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
-
-" Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -83,6 +85,9 @@ au BufNewFile,BufRead *.js.es6 set filetype=javascript
 " Support other json extensions
 au BufNewFile,BufRead .jshintrc,.eslintrc set filetype=json
 
+" Typescript
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+
 " Backup and tmp files
 set backup
 set backupdir=~/.config/nvim/backup
@@ -106,10 +111,14 @@ set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#complete_method = "omnifunc"
 " use tab to forward cycle
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " use tab to backward cycle
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" Do not complete markdown
+autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
+
 
 
 " Split to right and bottom. Makes more sense
@@ -143,6 +152,8 @@ let g:jsdoc_enable_es6 = 1
 " Allow JSX in common js files
 let g:jsx_ext_required = 0
 
+" ----- PYTHON -----
+let python_highlight_all = 1
 
 " ----- AIRLINE -----
 " Enable the list of buffers

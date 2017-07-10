@@ -1,38 +1,44 @@
 # Essentials
-sudo pacman -S yaourt aurvote firefox dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget unzip kdegraphics-ksnapshot ark p7zip zip unrar partitionmanager dosfstools dolphin-plugins
+sudo pacman -S pacaur dolphin gnome-terminal git tk sddm-kcm vim openssh gconf reflector fuse ntfs-3g kdegraphics-okular vlc libcddb kdegraphics-thumbnailers kdegraphics-svgpart kdesdk-thumbnailers gwenview wget unzip kdegraphics-ksnapshot ark p7zip zip unrar partitionmanager dosfstools dolphin-plugins
 
 # Intel Graphics
-yaourt -S xf86-video-intel mesa-libgl lib32-mesa-libgl libva-intel-driver libva
+pacaur -S xf86-video-intel mesa-libgl lib32-mesa-libgl libva-intel-driver libva
 
 # AMD Graphics
-yaourt -S ati-dri xf86-video-ati lib32-mesa lib32-mesa-libgl mesa-libgl mesa-demos libtxc_dxtn lib32-libtxc_dxtn lib32-ati-dri
+pacaur -S ati-dri xf86-video-ati lib32-mesa lib32-mesa-libgl mesa-libgl mesa-demos libtxc_dxtn lib32-libtxc_dxtn lib32-ati-dri
 
 # Dev
-yaourt -S neovim xclip python-neovim heroku-toolbelt zsh zsh-completions tmux ack httpie
+pacaur -S neovim xclip python-neovim heroku-toolbelt zsh zsh-completions tmux ack httpie
 
 # Node
-yaourt -S nvm-git phantomjs gcc
+pacaur -S nvm-git phantomjs gcc
 
 # Interface
-yaourt -S ttf-dejavu ttf-ms-fonts gnome-breeze-git noto-fonts-emoji breeze-gtk quota-tools
+pacaur -S ttf-dejavu ttf-ms-fonts gnome-breeze-git noto-fonts-emoji breeze-gtk quota-tools
 
 # Firefox plugins
-yaourt -S chromium-pepper-flash  freshplayerplugin-git icedtea-web google-talkplugin
+pacaur -S chromium-pepper-flash  freshplayerplugin-git icedtea-web google-talkplugin
 
 # Vagrant
-yaourt -S dnsutils vagrant virtualbox virtualbox-host-modules net-tools virtualbox-ext-oracle
+pacaur -S dnsutils vagrant virtualbox virtualbox-host-modules net-tools virtualbox-ext-oracle
 
 # Libreoffice
-yaourt -S libreoffice-fresh kdelibs pstoedit libmythes libmspack libpaper coin-or-mp hunspell hunspell-en hunspell-fr hunspell-es mythes-en mythes-es mythes-fr hyphen-en hyphen-es hyphen-fr
+pacaur -S libreoffice-fresh kdelibs pstoedit libmythes libmspack libpaper coin-or-mp hunspell hunspell-en hunspell-fr hunspell-es mythes-en mythes-es mythes-fr hyphen-en hyphen-es hyphen-fr
 
 # Skype
-yaourt -S skype lib32-apulse lib32-sni-qt
+pacaur -S skype lib32-apulse lib32-sni-qt
 
 # Dropbox
-yaourt -S dropbox dropbox-cli kfilebox
+pacaur -S dropbox dropbox-cli kfilebox
 
 # Amarok
-yaourt -S amarok gst-libav
+pacaur -S amarok gst-libav
 
 # Others
-yaourt -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin speedtest-cli wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao mkvtoolnix-gui opensc wireless_tools
+pacaur -S aic94xx-firmware cgoban3 messengerfordesktop robomongo-bin wd719x-firmware ktorrent k3b dvd+rw-tools transcode emovix cdrdao mkvtoolnix-gui opensc wireless_tools
+
+# Fonts
+pacaur -S adobe-source-code-pro-fonts
+
+# Browser
+pacaur -S vivaldi vivaldi-ffmpeg-codecs

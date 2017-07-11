@@ -233,5 +233,5 @@ nmap <leader>d <Plug>(jsdoc)
 nmap <silent><C-l> :Neomake<cr>
 
 """" Navigation
-noremap H ^
-noremap L g_
+"noremap H ^
+"noremap L g_

@@ -29,7 +29,11 @@ export EDITOR=nvim
 export SHELL=zsh
 
 # PATH
-PATH=~/.gem/ruby/2.4.0/bin:$PATH
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  PATH=~/.gem/ruby/2.4.0/bin:$PATH
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+fi
 
 # CDPATH
 CDPATH=~/Projects
@@ -40,6 +44,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-monokai.sh"
 
 # User configuration
 DEFAULT_USER="lsocrate"
+
 
 # Aliases
 source "$HOME/.alias"

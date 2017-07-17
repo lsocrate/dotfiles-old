@@ -22,3 +22,5 @@
 
 [color]
   ui = true
+[core]
+	editor = nvim

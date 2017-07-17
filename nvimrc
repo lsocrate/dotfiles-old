@@ -192,6 +192,8 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 " Make run authomatically on saves
 autocmd FileType javascript autocmd BufWritePost * Neomake
 
+let g:syntastic_disabled_filetypes=['handlebars']
+
 " #########
 " Shortcuts
 let mapleader = " "
@@ -225,6 +227,7 @@ nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+nnoremap <leader>ntf :NERDTreeFocus<cr>
 
 " Jsdoc
 nmap <leader>d <Plug>(jsdoc)

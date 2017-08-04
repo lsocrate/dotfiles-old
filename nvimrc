@@ -45,7 +45,6 @@ Plug 'alfredodeza/jacinto.vim'
 " Misc
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
 
@@ -191,8 +190,6 @@ let g:neomake_verbose = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 " Make run authomatically on saves
 autocmd FileType javascript autocmd BufWritePost * Neomake
-
-let g:syntastic_disabled_filetypes=['handlebars']
 
 " #########
 " Shortcuts

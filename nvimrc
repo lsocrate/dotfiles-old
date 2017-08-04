@@ -117,7 +117,8 @@ inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Do not complete markdown
 autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
-
+autocmd FileType html let b:deoplete_disable_auto_complete = 1
+autocmd FileType html let b:deoplete_sources = {}
 
 
 " Split to right and bottom. Makes more sense

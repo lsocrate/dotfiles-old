@@ -20,7 +20,7 @@ Plug 'benekastah/neomake'
 
 " Languages
 Plug 'wavded/vim-stylus'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
 Plug 'othree/html5.vim'
@@ -116,9 +116,7 @@ inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " use tab to backward cycle
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Do not complete markdown
-autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
-autocmd FileType html let b:deoplete_disable_auto_complete = 1
-autocmd FileType html let b:deoplete_sources = {}
+autocmd FileType markdown let b:deoplete_disable_auto_complete=1
 
 
 " Split to right and bottom. Makes more sense

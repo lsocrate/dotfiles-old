@@ -20,7 +20,7 @@ Plug 'benekastah/neomake'
 
 " Languages
 Plug 'wavded/vim-stylus'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
 Plug 'othree/html5.vim'
@@ -45,7 +45,6 @@ Plug 'alfredodeza/jacinto.vim'
 " Misc
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
 
@@ -117,8 +116,7 @@ inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " use tab to backward cycle
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Do not complete markdown
-autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
-
+autocmd FileType markdown let b:deoplete_disable_auto_complete=1
 
 
 " Split to right and bottom. Makes more sense
@@ -189,6 +187,7 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 " ----- Neomake -----
 let g:neomake_verbose = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_html_enabled_makers = []
 " Make run authomatically on saves
 autocmd FileType javascript autocmd BufWritePost * Neomake
 
@@ -225,6 +224,7 @@ nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+nnoremap <leader>ntf :NERDTreeFocus<cr>
 
 " Jsdoc
 nmap <leader>d <Plug>(jsdoc)

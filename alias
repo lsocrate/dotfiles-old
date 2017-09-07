@@ -27,3 +27,7 @@ function clean-neo4j-db() {
   sudo rm -rf /var/lib/neo4j/data/databases/graph.db
   sudo systemctl start neo4j.service
 }
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  alias ls='ls --color=auto'
+fi

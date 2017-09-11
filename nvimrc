@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdtree'
 
@@ -162,18 +162,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16'
 
-" ----- CtrlP -----
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|tmp|dist|plugins)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-
-" Use the nearest .git directory as the cwd
-" This makes a lot of sense if you are working on a project that is in version
-" control. It also supports works with .svn, .hg, .bzr.
-let g:ctrlp_working_path_mode = 'r'
-
 " ----- Buffergator -----
 " Use the right side of the screen
 let g:buffergator_viewport_split_policy = 'R'
@@ -212,7 +200,7 @@ nmap <silent><leader>l :BuffergatorMruCycleNext<cr>
 nmap <silent><leader>q :bp <BAR> bd #<CR>
 
 " Use a leader instead of the actual named binding
-nmap <silent><leader>p :CtrlP<cr>
+nmap <silent><leader>p :Files<cr>
 
 " Easy bindings for its various modes
 nmap <silent><leader>bb :CtrlPBuffer<cr>

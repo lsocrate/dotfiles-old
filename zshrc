@@ -52,3 +52,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'

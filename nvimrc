@@ -181,9 +181,6 @@ let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
 
-" ----- NERDTree -----
-let g:nerdtree_tabs_open_on_gui_startup = 0
-
 " ----- Neomake -----
 let g:neomake_verbose = 0
 let g:neomake_javascript_enabled_makers = ['eslint']

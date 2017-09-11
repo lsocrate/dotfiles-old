@@ -195,43 +195,42 @@ autocmd FileType javascript autocmd BufWritePost * Neomake
 " Shortcuts
 let mapleader = " "
 
+" Replace current word and allows redoing it with .
+nmap <silent><leader>r #*cgn
+
 " Activate and deactivate paste mode
-nmap <leader>v :set paste!<cr>
+nmap <silent><leader>v :set paste!<cr>
 
 " To open a new empty buffer
-nmap <leader>t :enew<cr>
+nmap <silent><leader>t :enew<cr>
 
 " Move to the next buffer
-nmap <leader>h :BuffergatorMruCyclePrev<cr>
+nmap <silent><leader>h :BuffergatorMruCyclePrev<cr>
 
 " Move to the previous buffer
-nmap <leader>l :BuffergatorMruCycleNext<cr>
+nmap <silent><leader>l :BuffergatorMruCycleNext<cr>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>q :bp <BAR> bd #<CR>
+nmap <silent><leader>q :bp <BAR> bd #<CR>
 
 " Use a leader instead of the actual named binding
-nmap <leader>p :CtrlP<cr>
+nmap <silent><leader>p :CtrlP<cr>
 
 " Easy bindings for its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
-" Easy split
+nmap <silent><leader>bb :CtrlPBuffer<cr>
+nmap <silent><leader>bm :CtrlPMixed<cr>
+nmap <silent><leader>bs :CtrlPMRU<cr>
 
+" Easy split
 nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>ntf :NERDTreeFocus<cr>
+nnoremap <silent><leader>nt :NERDTreeToggle<cr>
+nnoremap <silent><leader>ntf :NERDTreeFocus<cr>
 
 " Jsdoc
-nmap <leader>d <Plug>(jsdoc)
+nmap <silent><leader>d <Plug>(jsdoc)
 
 " Lint
-nmap <silent><C-l> :Neomake<cr>
-
-"""" Navigation
-"noremap H ^
-"noremap L g_
+nmap <silent><silent><C-l> :Neomake<cr>

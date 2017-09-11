@@ -7,7 +7,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'scrooloose/nerdtree'
 
 " Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -71,6 +70,13 @@ let base16colorspace=256
 set background=dark
 colorscheme base16-monokai
 set nohlsearch
+
+" File browsing
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
 
 " Remember position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -211,8 +217,7 @@ nmap <silent><leader>bs :CtrlPMRU<cr>
 nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
-nnoremap <silent><leader>nt :NERDTreeToggle<cr>
-nnoremap <silent><leader>ntf :NERDTreeFocus<cr>
+nnoremap <silent><leader>nt :Vexplore<cr>
 
 " Jsdoc
 nmap <silent><leader>d <Plug>(jsdoc)

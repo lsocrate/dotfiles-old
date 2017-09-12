@@ -224,3 +224,6 @@ nmap <silent><leader>d <Plug>(jsdoc)
 
 " Lint
 nmap <silent><silent><C-l> :Neomake<cr>
+
+" Increase number with Ctrl + i
+nmap <C-i> <C-a>

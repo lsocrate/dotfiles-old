@@ -7,6 +7,7 @@ zplug "modules/node", from:prezto
 zplug "modules/ssh", from:prezto
 zplug "modules/utility", from:prezto
 zplug "agnoster/agnoster-zsh-theme", as:theme
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

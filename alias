@@ -3,6 +3,11 @@ alias mux=tmuxinator
 alias pg-start=pg_ctl -D /usr/local/var/postgres start
 alias https='http --default-scheme=https --verify no'
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias ls='ls -G'
+fi
+
 function refresh-mirrors() {
   sudo reflector --verbose --country "$1" -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 }

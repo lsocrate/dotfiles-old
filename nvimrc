@@ -15,7 +15,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kshenoy/vim-signature'
 
 " Build
-Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 
 " Languages
 Plug 'wavded/vim-stylus'
@@ -58,7 +58,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Display line numbers
 set number
-set numberwidth=5
+set numberwidth=3
 set scrolloff=5
 
 " Indenting
@@ -175,12 +175,10 @@ let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
 
-" ----- Neomake -----
-let g:neomake_verbose = 0
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_html_enabled_makers = []
-" Make run authomatically on saves
-autocmd FileType javascript autocmd BufWritePost * Neomake
+" ----- ALE -----
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = 'Δ'
 
 " #########
 " Shortcuts
@@ -223,7 +221,7 @@ nnoremap <silent><leader>nt :Vexplore<cr>
 nmap <silent><leader>d <Plug>(jsdoc)
 
 " Lint
-nmap <silent><silent><C-l> :Neomake<cr>
+nmap <silent><silent><C-l> :ALELint<cr>
 
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>

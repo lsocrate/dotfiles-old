@@ -225,3 +225,7 @@ nmap <silent><silent><C-l> :ALELint<cr>
 
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>
+
+" QUICK
+inoremap <C-c> const 
+inoremap <C-l> console.log(

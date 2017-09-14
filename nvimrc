@@ -226,6 +226,9 @@ nmap <silent><silent><C-l> :ALELint<cr>
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>
 
-" QUICK
-inoremap <C-c> const 
-inoremap <C-l> console.log(
+" QUICK JS
+inoremap <C-j>c const 
+inoremap <C-j>l console.log()<left>
+inoremap <C-j>f function ()<left>
+inoremap <C-j>eg get(this, )<left>
+inoremap <C-j>es get(this, )<left>

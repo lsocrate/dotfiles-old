@@ -5,9 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'scrooloose/nerdtree'
 
 " Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -71,6 +70,13 @@ let base16colorspace=256
 set background=dark
 colorscheme base16-monokai
 set nohlsearch
+
+" File browsing
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
 
 " Remember position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -162,27 +168,12 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16'
 
-" ----- CtrlP -----
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|node_modules|bower_components|tmp|dist|plugins)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-
-" Use the nearest .git directory as the cwd
-" This makes a lot of sense if you are working on a project that is in version
-" control. It also supports works with .svn, .hg, .bzr.
-let g:ctrlp_working_path_mode = 'r'
-
 " ----- Buffergator -----
 " Use the right side of the screen
 let g:buffergator_viewport_split_policy = 'R'
 
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
-
-" ----- NERDTree -----
-let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " ----- Neomake -----
 let g:neomake_verbose = 0
@@ -195,43 +186,44 @@ autocmd FileType javascript autocmd BufWritePost * Neomake
 " Shortcuts
 let mapleader = " "
 
+" Replace current word and allows redoing it with .
+nmap <silent><leader>r #*cgn
+
 " Activate and deactivate paste mode
-nmap <leader>v :set paste!<cr>
+nmap <silent><leader>v :set paste!<cr>
 
 " To open a new empty buffer
-nmap <leader>t :enew<cr>
+nmap <silent><leader>t :enew<cr>
 
 " Move to the next buffer
-nmap <leader>h :BuffergatorMruCyclePrev<cr>
+nmap <silent><leader>h :BuffergatorMruCyclePrev<cr>
 
 " Move to the previous buffer
-nmap <leader>l :BuffergatorMruCycleNext<cr>
+nmap <silent><leader>l :BuffergatorMruCycleNext<cr>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>q :bp <BAR> bd #<CR>
+nmap <silent><leader>q :bp <BAR> bd #<CR>
 
 " Use a leader instead of the actual named binding
-nmap <leader>p :CtrlP<cr>
+nmap <silent><leader>p :Files<cr>
 
 " Easy bindings for its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
-" Easy split
+nmap <silent><leader>bb :CtrlPBuffer<cr>
+nmap <silent><leader>bm :CtrlPMixed<cr>
+nmap <silent><leader>bs :CtrlPMRU<cr>
 
+" Easy split
 nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>ntf :NERDTreeFocus<cr>
+nnoremap <silent><leader>nt :Vexplore<cr>
 
 " Jsdoc
-nmap <leader>d <Plug>(jsdoc)
+nmap <silent><leader>d <Plug>(jsdoc)
 
 " Lint
-nmap <silent><C-l> :Neomake<cr>
+nmap <silent><silent><C-l> :Neomake<cr>
 
-"""" Navigation
-"noremap H ^
-"noremap L g_
+" Increase number with Ctrl + i
+nmap <C-i> <C-a>

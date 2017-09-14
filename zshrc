@@ -1,4 +1,9 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  export ZPLUG_HOME=/usr/share/zsh/scripts/zplug
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export ZPLUG_HOME=/usr/local/opt/zplug
+fi
+
 source $ZPLUG_HOME/init.zsh
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"

@@ -17,13 +17,6 @@ wifi-strength() {
   watch -n 1 "awk 'NR==3 {print \"Signal strength = \" \$3 \"00 %\"}''' /proc/net/wireless"
 }
 
-function pre-vbox() {
-  sudo modprobe vboxdrv
-  sudo modprobe vboxnetadp
-  sudo modprobe vboxnetflt
-  sudo modprobe vboxpci
-}
-
 function my-ip() {
   dig +short myip.opendns.com @resolver1.opendns.com
 }

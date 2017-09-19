@@ -5,7 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Completion
@@ -31,6 +32,7 @@ Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'mhartington/nvim-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'hdima/python-syntax'
+Plug 'neovimhaskell/haskell-vim'
 
 " HTML structure builder
 Plug 'mattn/emmet-vim'

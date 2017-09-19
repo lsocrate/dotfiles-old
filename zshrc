@@ -35,13 +35,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-monokai.sh"
 
 # PATH
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  DEFAULT_USER="lsocrate"
   PATH=~/.gem/ruby/2.4.0/bin:$PATH
   source /usr/share/nvm/init-nvm.sh
-  # Base16 Shell
-  DEFAULT_USER="lsocrate"
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   DEFAULT_USER="luiz"
   PATH=/Applications/MAMP/bin/php/php7.1.1/bin:$PATH
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
 # CDPATH
@@ -57,5 +59,4 @@ setopt HIST_IGNORE_DUPS
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'

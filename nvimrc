@@ -33,6 +33,7 @@ Plug 'mhartington/nvim-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'hdima/python-syntax'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'exu/pgsql.vim'
 
 " HTML structure builder
 Plug 'mattn/emmet-vim'
@@ -119,6 +120,8 @@ set omnifunc=syntaxcomplete#Complete
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#complete_method = "omnifunc"
+autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+
 " use tab to forward cycle
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " use tab to backward cycle
@@ -160,6 +163,9 @@ let g:jsx_ext_required = 0
 
 " ----- PYTHON -----
 let python_highlight_all = 1
+
+" ----- SQL -----
+let g:sql_type_default = 'pgsql'
 
 " ----- AIRLINE -----
 " Enable the list of buffers

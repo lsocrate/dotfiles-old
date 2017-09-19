@@ -50,6 +50,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
 
+" SQL Client
+Plug 'vim-scripts/dbext.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -129,6 +132,8 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Do not complete markdown
 autocmd FileType markdown let b:deoplete_disable_auto_complete=1
 
+" SQL Connections
+source $HOME/.sql_connections.vim
 
 " Split to right and bottom. Makes more sense
 set splitbelow

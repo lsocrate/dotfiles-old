@@ -55,6 +55,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   DEFAULT_USER="luiz"
   PATH=/Applications/MAMP/bin/php/php7.1.1/bin:$PATH
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+  # CABAL
+  export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
 
 # CDPATH
@@ -68,6 +71,8 @@ setopt HIST_IGNORE_DUPS
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
 
 # FZF
 export FZF_DEFAULT_COMMAND='ag -g ""'

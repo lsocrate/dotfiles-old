@@ -216,14 +216,6 @@ nmap <silent><leader>l :BuffergatorMruCycleNext<cr>
 " This replicates the idea of closing a tab
 nmap <silent><leader>q :bp <BAR> bd #<CR>
 
-" Use a leader instead of the actual named binding
-nmap <silent><leader>p :Files<cr>
-
-" Easy bindings for its various modes
-nmap <silent><leader>bb :CtrlPBuffer<cr>
-nmap <silent><leader>bm :CtrlPMixed<cr>
-nmap <silent><leader>bs :CtrlPMRU<cr>
-
 " Easy split
 nmap <silent><C-w>n :vsplit<cr>
 
@@ -245,3 +237,28 @@ inoremap <C-j>l console.log()<left>
 inoremap <C-j>f function ()<left>
 inoremap <C-j>eg get(this, )<left>
 inoremap <C-j>es get(this, )<left>
+
+"""""
+" FZF
+"""""
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+" Filter files
+nmap <silent><leader>p :Files<cr>
+
+" Filter open buffers
+nnoremap <silent><Leader>b :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>

@@ -33,6 +33,7 @@ Plug 'mhartington/nvim-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'hdima/python-syntax'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-stylishask'
 Plug 'exu/pgsql.vim'
 
 " HTML structure builder
@@ -166,11 +167,22 @@ let g:jsdoc_enable_es6 = 1
 " Allow JSX in common js files
 let g:jsx_ext_required = 0
 
+" Snippets
+autocmd FileType javascript inoremap <C-s>c const 
+autocmd FileType javascript inoremap <C-s>l console.log()<left>
+autocmd FileType javascript inoremap <C-s>f function ()<left>
+autocmd FileType javascript inoremap <C-s>eg get(this, )<left>
+autocmd FileType javascript inoremap <C-s>es set(this, )<left>
+
 " ----- PYTHON -----
 let python_highlight_all = 1
 
 " ----- SQL -----
 let g:sql_type_default = 'pgsql'
+
+" ----- HASKELL -----
+let g:haskell_indent_after_bare_where = 0
+let g:haskell_indent_guard = 4
 
 " ----- AIRLINE -----
 " Enable the list of buffers
@@ -231,12 +243,6 @@ nmap <silent><silent><C-l> :ALELint<cr>
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>
 
-" QUICK JS
-inoremap <C-j>c const 
-inoremap <C-j>l console.log()<left>
-inoremap <C-j>f function ()<left>
-inoremap <C-j>eg get(this, )<left>
-inoremap <C-j>es get(this, )<left>
 
 """""
 " FZF

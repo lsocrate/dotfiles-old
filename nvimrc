@@ -50,9 +50,13 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
+Plug 'sbdchd/neoformat'
 
 " SQL Client
 Plug 'vim-scripts/dbext.vim'
+
+" Nerdtree
+Plug 'scrooloose/nerdtree'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -232,7 +236,29 @@ nmap <silent><leader>q :bp <BAR> bd #<CR>
 nmap <silent><C-w>n :vsplit<cr>
 
 " Nerdtree
-nnoremap <silent><leader>nt :Vexplore<cr>
+nnoremap <silent><leader>nt :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
 
 " Jsdoc
 nmap <silent><leader>d <Plug>(jsdoc)
@@ -242,6 +268,11 @@ nmap <silent><silent><C-l> :ALELint<cr>
 
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>
+
+" Neoformat
+nnoremap <silent><leader>f :Neoformat<cr>
+
+
 
 
 """""

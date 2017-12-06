@@ -1,7 +1,7 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   export ZPLUG_HOME=/usr/share/zsh/scripts/zplug
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  export ZPLUG_HOME=/usr/local/opt/zplug
+  export ZPLUG_HOME=~/.zplug
 fi
 
 source $ZPLUG_HOME/init.zsh
@@ -48,11 +48,11 @@ setopt    incappendhistory    #Immediately append to the history file, not just 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   DEFAULT_USER="lsocrate"
   PATH=~/.gem/ruby/2.4.0/bin:$PATH
-  source /usr/share/nvm/init-nvm.sh
+  #source /usr/share/nvm/init-nvm.sh
   source /usr/share/fzf/key-bindings.zsh
   source /usr/share/fzf/completion.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  DEFAULT_USER="luiz"
+  DEFAULT_USER="luiz.socrate"
   PATH=/Applications/MAMP/bin/php/php7.1.1/bin:$PATH
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -76,3 +76,10 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # FZF
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+#export NVM_DIR="/usr/local/opt/nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Custom env
+source "$HOME/.env"

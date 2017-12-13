@@ -26,11 +26,10 @@ Plug 'elzr/vim-json'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'digitaltoad/vim-jade'
-Plug 'lervag/vimtex'
 Plug 'mxw/vim-jsx'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'mhartington/nvim-typescript'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim' " Typescript highlight
 Plug 'hdima/python-syntax'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-stylishask'
@@ -48,9 +47,7 @@ Plug 'alfredodeza/jacinto.vim'
 " Misc
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'AndrewRadev/ember_tools.vim'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'sbdchd/neoformat'
 
 " SQL Client
 Plug 'vim-scripts/dbext.vim'
@@ -208,6 +205,8 @@ let g:buffergator_suppress_keymaps = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = 'Δ'
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
 
 " #########
 " Shortcuts
@@ -221,6 +220,9 @@ nmap <silent><leader>v :set paste!<cr>
 
 " To open a new empty buffer
 nmap <silent><leader>t :enew<cr>
+
+" Ale fix
+nmap <silent><leader>f :ALEFix<cr>
 
 " Move to the next buffer
 nmap <silent><leader>h :BuffergatorMruCyclePrev<cr>
@@ -268,12 +270,6 @@ nmap <silent><silent><C-l> :ALELint<cr>
 
 " Increase number with Ctrl + i
 nmap <C-i> <C-a>
-
-" Neoformat
-nnoremap <silent><leader>f :Neoformat<cr>
-
-
-
 
 """""
 " FZF

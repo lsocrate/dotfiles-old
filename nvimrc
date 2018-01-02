@@ -113,7 +113,7 @@ set autoread
 set laststatus=2
 
 " code width
-set colorcolumn=81
+set colorcolumn=101
 
 " Trim whitespace
 autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -286,7 +286,7 @@ function! s:bufopen(e)
 endfunction
 
 " Filter files
-nmap <silent><leader>p :Files<cr>
+nmap <silent><leader>p :GFiles<cr>
 
 " Filter open buffers
 nnoremap <silent><Leader>b :call fzf#run({

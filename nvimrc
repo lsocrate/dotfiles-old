@@ -202,6 +202,7 @@ let g:ale_sign_warning = 'Δ'
 let g:ale_fixers = {
 \ 'javascript': ['prettier']
 \}
+let g:ale_javascript_prettier_use_global = 1
 
 " #########
 " Shortcuts

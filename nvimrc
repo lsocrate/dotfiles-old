@@ -79,13 +79,6 @@ set background=dark
 colorscheme base16-monokai
 set nohlsearch
 
-" File browsing
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 20
-
 " Remember position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -122,6 +115,7 @@ autocmd FileType php,javascript,python,html,handlebars.html autocmd BufWritePre 
 set complete=.,w,b,u,U,t,i,d
 set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
+
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#complete_method = "omnifunc"
@@ -205,8 +199,9 @@ let g:buffergator_suppress_keymaps = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = 'Δ'
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers = {
+\ 'javascript': ['prettier']
+\}
 
 " #########
 " Shortcuts
@@ -295,3 +290,6 @@ nnoremap <silent><Leader>b :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
+
+" Out of terminal mode
+tnoremap jj <C-\><C-n>

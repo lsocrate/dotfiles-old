@@ -1,5 +1,6 @@
 [user]
-  email = luiz@socrate.com.br
+  email = luiz.socrate@klarna.com
+  ;email = luiz@socrate.com.br
   name = Luiz Sócrate
 
 [push]
@@ -12,6 +13,8 @@
   ci = commit
   co = checkout
   cp = cherry-pick
+  fa = fetch --all
+  pf = push --force-with-lease
   dump = cat-file -p
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   st = status
@@ -19,13 +22,16 @@
   untracked = ls-files --others --exclude-standard
   count-lines = !git ls-files | xargs wc -l
   stepback = checkout HEAD~1
+  rmremotebr = push origin --delete
 
 [color]
   ui = true
+
 [core]
-	editor = nvim
+  editor = nvim
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge --skip -- %f
-	process = git-lfs filter-process --skip
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge --skip -- %f
+  process = git-lfs filter-process --skip
+  required = true

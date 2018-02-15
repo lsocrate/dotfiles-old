@@ -2,6 +2,9 @@ alias nv=nvim
 alias mux=tmuxinator
 alias pg-start=pg_ctl -D /usr/local/var/postgres start
 alias https='http --default-scheme=https --verify no'
+alias g=git
+alias nd='nvm use default'
+alias buu='brew update && brew upgrade'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   alias ls='ls --color=auto'

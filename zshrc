@@ -28,6 +28,9 @@ zplug load
 export EDITOR=nvim
 export SHELL=zsh
 
+# Bring back ctrl-z
+set -o monitor
+
 unalias rm
 
 BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-monokai.sh"
@@ -53,11 +56,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   source /usr/share/fzf/completion.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   DEFAULT_USER="luiz.socrate"
-  PATH=/Applications/MAMP/bin/php/php7.1.1/bin:$PATH
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-  # CABAL
-  export PATH="$HOME/Library/Haskell/bin:$PATH"
+  export PATH="$HOME/.fastlane/bin:$PATH"
 fi
 
 # CDPATH

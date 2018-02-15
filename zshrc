@@ -7,10 +7,10 @@ fi
 source $ZPLUG_HOME/init.zsh
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "modules/completion", from:prezto
-zplug "modules/node", from:prezto
-zplug "modules/ssh", from:prezto
-zplug "modules/utility", from:prezto
+zplug "modules/completion", from:"prezto"
+zplug "modules/node", from:"prezto"
+zplug "modules/ssh", from:"prezto"
+zplug "modules/utility", from:"prezto"
 zplug "agnoster/agnoster-zsh-theme", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -28,8 +28,6 @@ zplug load
 export EDITOR=nvim
 export SHELL=zsh
 
-# Bring back ctrl-z
-set -o monitor
 
 unalias rm
 
@@ -46,6 +44,7 @@ HISTDUP=erase                 #Erase duplicates in the history file
 setopt    appendhistory       #Append history to the history file (no overwriting)
 setopt    sharehistory        #Share history across terminals
 setopt    incappendhistory    #Immediately append to the history file, not just when a term is killed
+setopt monitor
 
 # PATH
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -84,3 +83,4 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # Custom env
 source "$HOME/.env"
+

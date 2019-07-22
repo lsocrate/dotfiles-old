@@ -1,6 +1,5 @@
 [user]
-  email = luiz.socrate@klarna.com
-  ;email = luiz@socrate.com.br
+  email = luiz@socrate.com.br
   name = Luiz Sócrate
 
 [push]
@@ -31,7 +30,7 @@
   editor = nvim
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge --skip -- %f
-  process = git-lfs filter-process --skip
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true

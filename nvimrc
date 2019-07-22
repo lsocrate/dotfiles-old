@@ -1,38 +1,37 @@
 filetype off
 
 call plug#begin('~/.config/nvim/plugged')
-" UI
+" UI Colors
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
+
+" Navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdtree'
 
 " Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Marker support
 Plug 'kshenoy/vim-signature'
 
 " Build
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 " Languages
-Plug 'wavded/vim-stylus'
 Plug 'joukevandermaas/vim-ember-hbs'
-Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'digitaltoad/vim-jade'
 Plug 'mxw/vim-jsx'
 Plug 'neo4j-contrib/cypher-vim-syntax'
-Plug 'mhartington/nvim-typescript'
+"Plug 'mhartington/nvim-typescript'
 Plug 'HerringtonDarkholme/yats.vim' " Typescript highlight
 Plug 'hdima/python-syntax'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'alx741/vim-stylishask'
 Plug 'exu/pgsql.vim'
 
 " HTML structure builder
@@ -51,9 +50,6 @@ Plug 'heavenshell/vim-jsdoc'
 
 " SQL Client
 Plug 'vim-scripts/dbext.vim'
-
-" Nerdtree
-Plug 'scrooloose/nerdtree'
 
 " Add plugins to &runtimepath
 call plug#end()

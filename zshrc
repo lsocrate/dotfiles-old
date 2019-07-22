@@ -8,8 +8,8 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "modules/completion", from:"prezto"
-zplug "modules/node", from:"prezto"
-zplug "modules/ssh", from:"prezto"
+#zplug "modules/node", from:"prezto"
+#zplug "modules/ssh", from:"prezto"
 zplug "modules/utility", from:"prezto"
 zplug "agnoster/agnoster-zsh-theme", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -27,7 +27,6 @@ zplug load
 
 export EDITOR=nvim
 export SHELL=zsh
-
 
 unalias rm
 
@@ -57,7 +56,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   DEFAULT_USER="luiz.socrate"
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+  PATH="/usr/local/opt/ruby/bin:$PATH"
+  PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
   export PATH="$HOME/.fastlane/bin:$PATH"
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
 # CDPATH
@@ -73,14 +75,15 @@ setopt HIST_IGNORE_DUPS
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
+# Support all LC
+export LC_ALL=en_US.UTF-8
 
 # FZF
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
-#export NVM_DIR="/usr/local/opt/nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Custom env
 source "$HOME/.env"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

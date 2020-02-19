@@ -1,0 +1,72 @@
+{
+  "[markdown]": {
+    "editor.trimAutoWhitespace": false
+  },
+  "breadcrumbs.enabled": true,
+  "editor.cursorBlinking": "phase",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    100
+  ],
+  "editor.snippetSuggestions": "none",
+  "editor.suggest.localityBonus": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "yarn.lock": "yaml"
+  },
+  "git.autofetchPeriod": 300,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.statusBar.enabled": false,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "jest.enableSnapshotUpdateMessages": false,
+  "merge-conflict.diffViewPosition": "Below",
+  "prettier.disableLanguages": [
+    "markdown",
+    "yaml"
+  ],
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "breadcrumbs.symbolSortOrder": "name",
+  "selectline.alignment": "right",
+  "selectline.statusbarPriority": 101,
+  "jest.autoEnable": false,
+  "jest.runAllTestsFirst": false,
+  "eslint.alwaysShowStatus": true,
+  "npm.packageManager": "yarn",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "gitlens.currentLine.enabled": false,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.enableNeovim": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.prettierPath": "./node_modules/prettier",
+  "liveshare.featureSet": "stable",
+  "files.defaultLanguage": "markdown"
+}

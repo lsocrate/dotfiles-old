@@ -75,6 +75,8 @@ setopt HIST_IGNORE_DUPS
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
 # Support all LC
 export LC_ALL=en_US.UTF-8
 

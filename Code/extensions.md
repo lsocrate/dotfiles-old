@@ -1,0 +1,28 @@
+- avro-idl
+- Cypher Query Language
+- DotENV
+- EditorConfig for VS Code
+- Ember Language Server
+- ESLint
+- Excel Viewer
+- File Utils
+- GitLens
+- GraphQL
+- Haskell Syntax Highlighting
+- Jest
+- Live Share
+- Lorem ipsum
+- Monokai Pro
+- npm Intellisense
+- Partial Diff
+- Paste JSON as Code
+- pgFormatter
+- Prettier - Code formatter
+- R
+- Sass
+- Select Line Status Bar
+- SVG Viewer
+- TODO Highlight
+- Vim
+- Visual Studio Intellicode
+

@@ -1,11 +1,8 @@
-[user]
-  email = luiz.socrate@klarna.com
-  name = Luiz Sócrate
-
 [push]
   default = simple
 
 [alias]
+  cleanup = !git branch --merged master | egrep -v '(^\\*|master)' | xargs -n 1 git branch -d
   abort-merge = reset --hard HEAD
   amend = commit --amend
   br = branch
@@ -36,3 +33,5 @@
 	required = true
 [protocol]
 	version = 2
+[fetch]
+	prune = true
